@@ -11,15 +11,12 @@ $(document).ready(function() {
      this.rank = rank;
    };
 
-  function CreateDeck() {
-    suits.forEach(function(rank) {
-      ranks.forEach(function(suit) {
-        cards.push(new card(rank, suit));
+
+    suits.forEach(function(suit) {
+      ranks.forEach(function(rank) {
+        $("ul").append("<li>" + rank + " of " + suit + "</li>");
       });
     });
+    });
 
-  console.log(cards);
-  };
-
-  CreateDeck();
-});
+  // $(".list" + suit + rank).text(card);
